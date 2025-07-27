@@ -15,11 +15,12 @@ jobs:
   Upload-File:
     runs-on: ubuntu-latest
     steps:
-      - run: chmod +x create_file.sh
-      - run: ./create_file.sh
-      - uses: actions/upload-artifact@v4
-        with:
-          name: my-artifact
-          path: ./world.txt
+      - run: ls -R
+      # - run: chmod +x create_file.sh
+      # - run: ./create_file.sh
+      # - uses: actions/upload-artifact@v4
+      #   with:
+      #     name: my-artifact
+      #     path: ./world.txt
 
 
