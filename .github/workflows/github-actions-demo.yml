@@ -10,6 +10,9 @@ jobs:
         name: my-artifact
     - name: Display structure of downloaded files
       run: ls -R
+    - run: cat world.txt
+      
+      
   
   Upload-File:
     runs-on: ubuntu-latest
