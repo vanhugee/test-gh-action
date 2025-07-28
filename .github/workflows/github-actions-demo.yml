@@ -15,16 +15,17 @@ jobs:
   Upload-File:
     runs-on: ubuntu-latest
     steps:
-        - uses: actions/checkout@v4
-          with:
-            sparse-checkout: |
-              create_file.sh
-            sparse-checkout-cone-mode: false
-        - run: chmod +x create_file.sh
-        - run: ./create_file.sh
+        # - uses: actions/checkout@v4
+        #   with:
+        #     sparse-checkout: |
+        #       create_file.sh
+        #     sparse-checkout-cone-mode: false
+        # - run: chmod +x create_file.sh
+        # - run: ./create_file.sh
+        - run: echo hello > world.txt
         - uses: actions/upload-artifact@v4
           with:
-            name: my-artifact-hehe
+            name: my-artifact-v1
             path: world.txt
 
 
