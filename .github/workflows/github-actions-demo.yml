@@ -20,12 +20,11 @@ jobs:
             sparse-checkout: |
               create_file.sh
             sparse-checkout-cone-mode: false
-        - run: cat create_file.sh
-      # - run: chmod +x create_file.sh
-      # - run: ./create_file.sh
-      # - uses: actions/upload-artifact@v4
-      #   with:
-      #     name: my-artifact
-      #     path: ./world.txt
+        - run: chmod +x create_file.sh
+        - run: ./create_file.sh
+        - uses: actions/upload-artifact@v4
+          with:
+            name: my-artifact
+            path: ./world.txt
 
 
