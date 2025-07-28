@@ -2,15 +2,15 @@ name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
-  # Download-File:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #   - uses: actions/download-artifact@v4
-  #     with:
-  #       name: my-artifact
-  #   - name: Display structure of downloaded files
-  #     run: ls -R
-  #   - run: cat world.txt
+  Download-File:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/download-artifact@v4
+      with:
+        name: my-artifact
+    - name: Display structure of downloaded files
+      run: ls -R
+    - run: cat world.txt
     
   Upload-File:
     runs-on: ubuntu-latest
