@@ -15,7 +15,12 @@ jobs:
   Upload-File:
     runs-on: ubuntu-latest
     steps:
-      - run: ls -R
+        - uses: actions/checkout@v4
+          with:
+            sparse-checkout: |
+              create_file.sh
+            sparse-checkout-cone-mode: false
+        - run: cat create_file.sh
       # - run: chmod +x create_file.sh
       # - run: ./create_file.sh
       # - uses: actions/upload-artifact@v4
